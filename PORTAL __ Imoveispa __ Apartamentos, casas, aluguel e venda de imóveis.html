@@ -20,8 +20,8 @@
     var CONTROLLER  = "home";
   </script>
   
-  <link rel="stylesheet" media="all" href="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/application-750a979647d570e2e0310d071287307ad7b81a7431374c5c1ebfd5d5952815c0.css" data-turbolinks-track="true">
-  <script src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/application-eca8da27b5fa11b5f29292b180b45c3d16c26ec27f9788cddcdb34c9a94944f9.js.download" data-turbolinks-track="true"></script><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+  <link rel="stylesheet" media="all" href="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/application-e1b91ab0318c72d6963a28d89049efc462d19bf80be675c6eb20429163a63def.css" data-turbolinks-track="true">
+  <script src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/application-ebd8f0e407ddd51dd456fb9dc1df0db9806cc98992b18619bc75bd111974aaa7.js.download" data-turbolinks-track="true"></script><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
 	font-weight: bold;
 	padding: 8px 15px 8px 14px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -111,9 +111,6 @@
       }
       .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/onion.js.download"></script><script type="text/javascript" charset="UTF-8" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/controls.js.download"></script><script type="text/javascript" charset="UTF-8" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/stats.js.download"></script></head>
 
-<link rel="stylesheet" type="text/css" href="PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/fonts.css">
-<link rel="stylesheet" type="text/css" href="PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/fixmenu.css">
-
 <body class="home">
 
   <header class="navbar-fixed-top">
@@ -199,7 +196,7 @@
   <div class="navbar-header">
     <div class="busca-mobile">
       <div class="campo-busca-mobile">
-        <input type="text" placeholder="Digite a rua, bairro, cidade ou região" nome="address" id="address" value="" style="margin-right: 5px;" class="form-control" autocomplete="off" maxlength="40">
+        <input type="text" placeholder="Digite a rua, bairro, cidade ou região" nome="address" id="address" class="address" value="" style="margin-right: 5px;" autocomplete="off" maxlength="40">
         <button class="btn-buscar-mobile" type="button" onclick="window.location.href=&#39;/?address=&#39; + $(&#39;#address&#39;).val() +&#39;&amp;commit=Buscar&#39;">
           <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/localizar.svg" style="width: 20px;">
         </button>
@@ -218,186 +215,212 @@
         <div class="nivel-busca">
 
           <!-- localidade -->
-          <div class="local-busca"> 
-            <div class="campo-composto">
-              <input type="text" name="address" id="address" class="ui-helper-hidden-accessible" placeholder="Digite a rua, bairro, cidade ou região" maxlength="140">
-              </div>         
-          </div>
-          <div class="localidade-busca">
-            <a class="left" href="https://www.imoveispa.com.br/#" data-toggle="modal" data-target="#localityModal"><img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/localizar.svg"></a>
-          </div>
-            
+          
+          
+
+          <link href="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/menu.css" rel="stylesheet">
+          
+
           <!-- tipo de transação -->
-          <div class="transacao">
-            <div class="dropdown">
-              <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">O que você precisa? <span class="caret"></span></a>
+            <div class="menu-itens tipo-transacao">
+              <div class="buttons" id="divTransacao">
+                <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
+                  <input type="radio" class="radio" value="sell" name="contract" id="contract_compra" selected>
+                  <label for="contract_compra" class='active'>Comprar</label>
+                </div>
+                <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
+                  <input type="radio" class="radio" value="rent" name="contract" id="contract_aluga">
+                  <label for="contract_aluga">Alugar</label>
+                </div>
+                <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
+                  <input type="radio" class="radio" value="release" name="contract" id="contract_lancamento">
+                  <label for="contract_lancamento" style="border: 0px">Lançamentos</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="local-busca"> 
+              <div class="campo-composto" style="width: 100%;">
+                <input type="text" name="address" id="address" class="ui-helper-hidden-accessible address" placeholder="Digite a rua, bairro, cidade ou região" maxlength="140" style="width: 100%;">
+                </div>         
+            </div>
+          <div class="outros-busca">
+            
+            <div class="localidade-busca">
+              <a class="left" href="https://www.imoveispa.com.br/#" data-toggle="modal" data-target="#localityModal"><img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/localizar.svg"></a>
+            </div>
+              
+            
+
+            <!-- Valor -->
+            <div class="valor">   
+              <div class=" dropdown">
+              <a name="price" id="price" href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class ui-autocomplete-input" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Faixa de preço <span class="caret"></span></a>
               <div class="nopadding_dropdown dropdown-menu">
-                <div class="tipo-transacao">
-                  <div class="clearfix"></div>
-                  <div class="buttons" id="divTransacao">
-                    <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
-                      <input type="radio" class="radio" value="sell" name="contract" id="contract_compra">
-                      <label for="contract_compra">Comprar</label>
-                    </div>
-                    <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
-                      <input type="radio" class="radio" value="rent" name="contract" id="contract_aluga">
-                      <label for="contract_aluga">Alugar</label>
-                    </div>
-                    <div class="button tipo " onclick="$(&#39;.button.tipo&#39;).removeClass(&#39;active&#39;);$(this).addClass(&#39;active&#39;)">
-                      <input type="radio" class="radio" value="release" name="contract" id="contract_lancamento">
-                      <label for="contract_lancamento">Lançamentos</label>
-                    </div>
+                <div id="divFaixaPreco" class="content-preco content-slider box-filtro" data-filtro="slider">
+                  <span class="titulo">FAIXA DE PREÇO - R$</span>
+                  <input type="text" name="price" id="price" value="" class="ui-autocomplete-input" placeholder="" maxlength="40" style="width: 254px;margin-left: 19px;margin-top: 5px;">
+
+                  <div id="box-slider-preco" class="box-busca">
+                    <ul class="unstyled pull-left">
+                      <li><input type="text" id="typePrecoMin" class="input-slider-esq" name="price_min" value=""></li>
+                      <li class="spacer-slider"><span class="spacer-left"></span>até <span class="spacer-right"></span></li>
+                      <li><input type="text" id="typePrecoMax" class="input-slider-dir" name="price_max" value=""></li>
+                    </ul>
+                    <div id="slider-busca-preco" class="noUi-target noUi-ltr noUi-horizontal noUi-background ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0.0666667%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0.0666667%;"></span><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0.0666667%;"></div></div>
+                    <input type="button" value="Ok" class="btn-ok-busca" id="fecharFaixa" onclick="searchNow();" style="margin: 0px;float: right;">
                   </div>
                 </div>
               </div>
             </div>
-          </div>         
+          </div>
 
-          <!-- Valor -->
-          <div class="valor">   
+          <!-- tipo do área -->
+          <div class="imovel valor">
             <div class="dropdown">
-            <a name="price" id="price" href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class ui-autocomplete-input" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Faixa de preço <span class="caret"></span></a>
-            <div class="nopadding_dropdown dropdown-menu">
-              <div id="divFaixaPreco" class="content-preco content-slider box-filtro" data-filtro="slider" style="display: none;">
-                <span class="titulo">FAIXA DE PREÇO - R$</span>
-                <input type="text" name="price" id="price" value="" class="ui-autocomplete-input" placeholder="" maxlength="40" style="width: 254px;margin-left: 19px;margin-top: 5px;">
+              <a name="area" id="area" href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Área <span class="caret"></span></a>
+              <div class="nopadding_dropdown dropdown-menu">
+                <div id="divFaixaArea" class="content-area content-slider box-filtro-area" data-filtro="slider">
+                  <span class="titulo">ÁREA (M<sup>2</sup>)</span>
+                  <input type="text" name="area" id="area" value="" class="ui-autocomplete-input" placeholder="" maxlength="40" style="width: 254px;margin-left: 19px;margin-top: 5px;">
 
-                <div id="box-slider-preco" class="box-busca">
-                  <ul class="unstyled pull-left">
-                    <li><input type="text" id="typePrecoMin" class="input-slider-esq" name="price_min" value=""></li>
-                    <li class="spacer-slider"><span class="spacer-left"></span>até <span class="spacer-right"></span></li>
-                    <li><input type="text" id="typePrecoMax" class="input-slider-dir" name="price_max" value=""></li>
-                  </ul>
-                  <div id="slider-busca-preco" class="noUi-target noUi-ltr noUi-horizontal noUi-background ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0.0666667%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0.0666667%;"></span><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0.0666667%;"></div></div>
-                  <input type="button" value="Ok" class="btn-buscar" id="fecharFaixa" onclick="$(&#39;#divFaixaPreco&#39;).hide()" style="margin: 0px;float: right;">
+                  <div id="box-slider-area" class="box-busca">
+                    <ul class="unstyled pull-left">
+                      <li><input type="text" id="typeAreaMin" class="input-slider-esq" name="area_min" value=""></li>
+                      <li class="spacer-slider"><span class="spacer-left"></span>até <span class="spacer-right"></span></li>
+                      <li><input type="text" id="typeAreaMax" class="input-slider-dir" name="area_max" value=""></li>
+                    </ul>
+                    <div id="slider-busca-area" class="noUi-target noUi-ltr noUi-horizontal noUi-background ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 0.0666667%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 10%;"></span><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 10%;"></div></div>
+                    <input type="button" value="Ok" class="btn-ok-busca" id="fecharFaixa" onclick="searchNow();" style="margin: 0px;float: right;">
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+
+          <!-- tipo do imóvel -->
+          <div class="imovel">
+            <div class="dropdown">
+              <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Qual tipo? <span class="caret"></span></a>
+              <div class="nopadding_dropdown dropdown-menu">
+                <div class="tipo-transacao">
+                  <div class="clearfix"></div>
+                  <div class="" id="">
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="1" name="kind" id="kind-1">
+                        <label for="kind-1">Apartamento</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="10" name="kind" id="kind-10">
+                        <label for="kind-10">Casa Comercial</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="4" name="kind" id="kind-4">
+                        <label for="kind-4">Flat</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="7" name="kind" id="kind-7">
+                        <label for="kind-7">Kitnet</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="2" name="kind" id="kind-2">
+                        <label for="kind-2">Casa</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="8" name="kind" id="kind-8">
+                        <label for="kind-8">Box</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="9" name="kind" id="kind-9">
+                        <label for="kind-9">Garagem</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="11" name="kind" id="kind-11">
+                        <label for="kind-11">Chácara</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="3" name="kind" id="kind-3">
+                        <label for="kind-3">Casa de Condomínio</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="5" name="kind" id="kind-5">
+                        <label for="kind-5">Sobrado</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="6" name="kind" id="kind-6">
+                        <label for="kind-6">Cobertura</label>
+                      </div>
+                      <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
+                        <input type="radio" class="radio" value="12" name="kind" id="kind-12">
+                        <label for="kind-12">Lote/Terreno</label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+
+          <!-- Quantidade -->
+
+          <div class="menu-itens">
+
+            <!-- Quartos -->
+            <div class="quartos_dropdown">
+              <div class=" dropdown">
+                <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Quartos<span class="caret"></span></a>
+                <div class="nopadding_dropdown dropdown-menu">
+                  <div>
+                    <ul class="no_style_list">
+                      <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="1"> 1</li>
+                      <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="2"> 2</li>
+                      <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="3"> 3</li>
+                      <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="4"> 4+</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- tipo do imóvel -->
-        <div class="imovel">
-          <div class="dropdown">
-            <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Qual tipo? <span class="caret"></span></a>
-            <div class="nopadding_dropdown dropdown-menu">
-              <div class="tipo-transacao">
-                <div class="clearfix"></div>
-                <div class="" id="">
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="1" name="kind" id="kind-1">
-                      <label for="kind-1">Apartamento</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="10" name="kind" id="kind-10">
-                      <label for="kind-10">Casa Comercial</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="4" name="kind" id="kind-4">
-                      <label for="kind-4">Flat</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="7" name="kind" id="kind-7">
-                      <label for="kind-7">Kitnet</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="2" name="kind" id="kind-2">
-                      <label for="kind-2">Casa</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="8" name="kind" id="kind-8">
-                      <label for="kind-8">Box</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="9" name="kind" id="kind-9">
-                      <label for="kind-9">Garagem</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="11" name="kind" id="kind-11">
-                      <label for="kind-11">Chácara</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="3" name="kind" id="kind-3">
-                      <label for="kind-3">Casa de Condomínio</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="5" name="kind" id="kind-5">
-                      <label for="kind-5">Sobrado</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="6" name="kind" id="kind-6">
-                      <label for="kind-6">Cobertura</label>
-                    </div>
-                    <div class="kind_button " onclick="$(&#39;.kind_button&#39;).removeClass(&#39;ativo&#39;);$(this).addClass(&#39;ativo&#39;)">
-                      <input type="radio" class="radio" value="12" name="kind" id="kind-12">
-                      <label for="kind-12">Lote/Terreno</label>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div>
-
-        <!-- Quantidade -->
-
-        <div id="quantidade">
-
-          <!-- Quartos -->
-          <div class="quartos_dropdown">
-            <div class="dropdown">
-              <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Quartos<span class="caret"></span></a>
-              <div class="nopadding_dropdown dropdown-menu">
-                <div>
-                  <ul class="no_style_list">
-                    <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="1"> 1</li>
-                    <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="2"> 2</li>
-                    <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="3"> 3</li>
-                    <li><input type="checkbox" name="bedrooms[]" id="bedrooms_" value="4"> 4+</li>
-                  </ul>
+          <div class="menu-itens">
+            <!-- Suites -->
+            <div class="suites_dropdown">
+              <div class=" dropdown">
+                <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Suites<span class="caret"></span></a>
+                <div class="nopadding_dropdown dropdown-menu">
+                  <div>
+                    <ul class="no_style_list">
+                      <li><input type="checkbox" name="suits[]" id="suits_" value="1"> 1</li>
+                      <li><input type="checkbox" name="suits[]" id="suits_" value="2"> 2</li>
+                      <li><input type="checkbox" name="suits[]" id="suits_" value="3"> 3</li>
+                      <li><input type="checkbox" name="suits[]" id="suits_" value="4"> 4+</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div id="quantidade">
-          <!-- Suites -->
-          <div class="suites_dropdown">
-            <div class="dropdown">
-              <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Suites<span class="caret"></span></a>
-              <div class="nopadding_dropdown dropdown-menu">
-                <div>
-                  <ul class="no_style_list">
-                    <li><input type="checkbox" name="suits[]" id="suits_" value="1"> 1</li>
-                    <li><input type="checkbox" name="suits[]" id="suits_" value="2"> 2</li>
-                    <li><input type="checkbox" name="suits[]" id="suits_" value="3"> 3</li>
-                    <li><input type="checkbox" name="suits[]" id="suits_" value="4"> 4+</li>
-                  </ul>
+          <div class="menu-itens">
+            <!-- Vagas -->
+            <div class="vagas_dropdown">
+              <div class=" dropdown">
+                <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Vagas<span class="caret"></span></a>
+                <div class="nopadding_dropdown dropdown-menu">
+                  <div>
+                    <ul class="no_style_list">
+                      <li><input type="checkbox" name="garages[]" id="garages_" value="1"> 1</li>
+                      <li><input type="checkbox" name="garages[]" id="garages_" value="2"> 2</li>
+                      <li><input type="checkbox" name="garages[]" id="garages_" value="3"> 3</li>
+                      <li><input type="checkbox" name="garages[]" id="garages_" value="4"> 4+</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>            
+          </div>          
+          <input type="submit" name="commit" value="Buscar" class="btn-buscar" data-disable-with="Buscar">
         </div>
-
-        <div id="quantidade">
-          <!-- Vagas -->
-          <div class="vagas_dropdown">
-            <div class="dropdown">
-              <a href="https://www.imoveispa.com.br/#" class="dropdown-toggle need_class" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" onfocus="this.children[0].classList.add(&#39;up_caret&#39;)" onblur="this.children[0].classList.remove(&#39;up_caret&#39;)">Vagas<span class="caret"></span></a>
-              <div class="nopadding_dropdown dropdown-menu">
-                <div>
-                  <ul class="no_style_list">
-                    <li><input type="checkbox" name="garages[]" id="garages_" value="1"> 1</li>
-                    <li><input type="checkbox" name="garages[]" id="garages_" value="2"> 2</li>
-                    <li><input type="checkbox" name="garages[]" id="garages_" value="3"> 3</li>
-                    <li><input type="checkbox" name="garages[]" id="garages_" value="4"> 4+</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>            
-        </div>          
-        <input type="submit" name="commit" value="Buscar" class="btn-buscar" data-disable-with="Buscar">
       </div>
 </form>    </div>
   </div>
@@ -464,6 +487,8 @@
 <script>
     var prices = [0, 10000];
 
+    var areas = [0, 1000];
+
   $(".dropdown dt a").on('click', function() {
     $(this).parents(".dropdown").find("dd ul").slideToggle('fast');
   });
@@ -522,7 +547,7 @@
   <div class="row">
     <div id="content-left" class="col-xs-12 col-sm-6" style="padding: 0px;">
       <div class="list-map-button" style="display: block;">Lista</div>
-      <div id="map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: -256px;"></div></div></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62737px; top: 91730px; z-index: 91762;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62955px; top: 91692px; z-index: 91724;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62731px; top: 91724px; z-index: 91756;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62868px; top: 91944px; z-index: 91976;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(1)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(2)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(3)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(4)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(5)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(6)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(7)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(8)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(9)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(10)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(11)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(12)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(13)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(14)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(15)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(16)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(17)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(18)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(19)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(20)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(21)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(22)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(23)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(24)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(25)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(26)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(27)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0; transition-duration: 0.8s;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div><div style="z-index: 4; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div class="gmnoprint" title="7-Casa subtitulo top em Rua Joaquim távora, 47" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62737px; top: 91730px; z-index: 91762;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="9-Casa de Condomínio subtitulo top em Rua pelotas, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62955px; top: 91692px; z-index: 91724;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="1-Apartamento subtitulo top em Rua Joaquim távora, 2" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62731px; top: 91724px; z-index: 91756;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="2-Box subtitulo top em Rua Joaquim távora, 14" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62868px; top: 91944px; z-index: 91976;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="19-Lote/Terreno subtitulo top em R curitiba, 143" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="18-Flat subtitulo top em Rua rio de janeiro, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="17-Cobertura subtitulo top em Rua dos timbiras, 50" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="16-Sobrado subtitulo top em Rua rio de janeiro, 82" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="15-Lote/Terreno subtitulo top em R curitiba, 57" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="14-Casa de Condomínio subtitulo top em R curitiba, 70" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="19-Lote/Terreno subtitulo top em R curitiba, 143" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="18-Flat subtitulo top em Rua rio de janeiro, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="17-Cobertura subtitulo top em Rua dos timbiras, 50" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="16-Sobrado subtitulo top em Rua rio de janeiro, 82" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="15-Lote/Terreno subtitulo top em R curitiba, 57" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="14-Casa de Condomínio subtitulo top em R curitiba, 70" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="cursor: default; position: absolute; visibility: hidden; width: 53px; height: 33px;"><div style="position: absolute; left: 0px; top: 0px;"><div style="width: 0px; height: 0px; border-right: 10px solid transparent; border-left: 10px solid transparent; border-top: 24px solid rgba(0, 0, 0, 0.1); position: absolute; left: 17px; top: 33px;"></div><div style="position: absolute; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0.2); border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; width: 53px; height: 33px;"></div><div style="border-top-width: 24px; position: absolute; left: 17px; top: 30px;"><div style="position: absolute; overflow: hidden; left: -6px; top: -1px; width: 16px; height: 30px;"><div style="position: absolute; left: 6px; background-color: rgb(255, 255, 255); transform: skewX(22.6deg); transform-origin: 0px 0px 0px; height: 24px; width: 10px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;"></div></div><div style="position: absolute; overflow: hidden; top: -1px; left: 10px; width: 16px; height: 30px;"><div style="position: absolute; left: 0px; background-color: rgb(255, 255, 255); transform: skewX(-22.6deg); transform-origin: 10px 0px 0px; height: 24px; width: 10px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;"></div></div></div><div style="position: absolute; left: 1px; top: 1px; border-radius: 2px; background-color: rgb(255, 255, 255); width: 51px; height: 31px;"></div></div><div class="gm-style-iw" style="top: 9px; position: absolute; left: 15px; overflow: hidden; width: 23px;"><div style="display: inline-block; overflow: auto; max-height: 654px; max-width: 654px;"></div><div style="border-top: 1px solid rgb(204, 204, 204); margin-top: 9px; padding: 6px; display: none; visibility: hidden; font-size: 13px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-family: Roboto, Arial;"><a href="https://www.imoveispa.com.br/" target="_blank" style="cursor: pointer; color: rgb(66, 127, 237); text-decoration: none;">Visualize no Google Maps</a></div></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 10px; z-index: 10000; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div></div></div><iframe frameborder="0" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/saved_resource.html" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=-19.926122,-43.941935&amp;z=15&amp;t=m&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 326px; top: 360px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div><div style="font-size: 13px;">Dados cartográficos ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 193px; bottom: 0px; width: 170px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span style="">Dados cartográficos ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Dados cartográficos ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 113px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div></div><button draggable="false" title="Ativar a visualização em tela cheia" aria-label="Ativar a visualização em tela cheia" type="button" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px 14px; padding: 0px; position: absolute; cursor: pointer; user-select: none; width: 25px; height: 25px; overflow: hidden; top: 0px; right: 0px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></button><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-19.926122,-43.941935,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><button draggable="false" title="Aumentar o zoom" aria-label="Aumentar o zoom" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Diminuir o zoom" aria-label="Diminuir o zoom" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; display: none;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; top: 0px; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; user-select: none; position: absolute; display: none; bottom: 26px; left: 0px;"></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Mostrar mapa de ruas" aria-label="Mostrar mapa de ruas" aria-pressed="true" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px; font-weight: 500;">Mapa</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Relevo</label></div></div></div><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Mostrar imagens de satélite" aria-label="Mostrar imagens de satélite" aria-pressed="false" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 37px; border-left: 0px;">Satélite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Marcadores</label></div></div></div></div></div></div></div>
+      <div id="map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 512px;"></div></div></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62955px; top: 91692px; z-index: 91724;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62731px; top: 91724px; z-index: 91756;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62868px; top: 91944px; z-index: 91976;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62862px; top: 91201px; z-index: 91233;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62851px; top: 91203px; z-index: 91235;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62969px; top: 91688px; z-index: 91720;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62858px; top: 91702px; z-index: 91734;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -62956px; top: 91687px; z-index: 91719;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 32px; height: 32px; overflow: hidden; position: absolute; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -79, -109);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(1)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(2)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(3)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(4)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(5)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(6)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(7)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(8)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(9)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(10)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(11)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(12)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(13)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(14)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(15)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(16)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(17)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(18)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(19)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(20)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(21)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(22)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(23)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/vt(24)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div><div style="z-index: 4; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div class="gmnoprint" title="19-Lote/Terreno subtitulo top em R curitiba, 143" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="18-Flat subtitulo top em Rua rio de janeiro, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="17-Cobertura subtitulo top em Rua dos timbiras, 50" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="16-Sobrado subtitulo top em Rua rio de janeiro, 82" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="15-Lote/Terreno subtitulo top em R curitiba, 57" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="14-Casa de Condomínio subtitulo top em R curitiba, 70" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="9-Casa de Condomínio subtitulo top em Rua pelotas, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62955px; top: 91692px; z-index: 91724;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="1-Apartamento subtitulo top em Rua Joaquim távora, 2" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62731px; top: 91724px; z-index: 91756;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="2-Box subtitulo top em Rua Joaquim távora, 14" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62868px; top: 91944px; z-index: 91976;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="6-Cobertura subtitulo top em Rua Vergueiro, 4" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62862px; top: 91201px; z-index: 91233;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="4-Lote/Terreno subtitulo top em Rua Vergueiro, 7" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62851px; top: 91203px; z-index: 91235;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="8-Garagem subtitulo top em Rua pelotas, 60" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62969px; top: 91688px; z-index: 91720;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="10-Chácara subtitulo top em Avenida conselheiro rodrigues alves, 7" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62858px; top: 91702px; z-index: 91734;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="11-Casa subtitulo top em Rua pelotas, 8" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -62956px; top: 91687px; z-index: 91719;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="19-Lote/Terreno subtitulo top em R curitiba, 143" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="18-Flat subtitulo top em Rua rio de janeiro, 11" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="17-Cobertura subtitulo top em Rua dos timbiras, 50" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="16-Sobrado subtitulo top em Rua rio de janeiro, 82" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -69px; top: 49px; z-index: 81;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="15-Lote/Terreno subtitulo top em R curitiba, 57" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: 20px; top: 205px; z-index: 237;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gmnoprint" title="14-Casa de Condomínio subtitulo top em R curitiba, 70" style="width: 32px; height: 32px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -16px; top: -32px; z-index: 0;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/geopoint.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 32px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="cursor: default; position: absolute; visibility: hidden; width: 53px; height: 33px;"><div style="position: absolute; left: 0px; top: 0px;"><div style="width: 0px; height: 0px; border-right: 10px solid transparent; border-left: 10px solid transparent; border-top: 24px solid rgba(0, 0, 0, 0.1); position: absolute; left: 17px; top: 33px;"></div><div style="position: absolute; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0.2); border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; width: 53px; height: 33px;"></div><div style="border-top-width: 24px; position: absolute; left: 17px; top: 30px;"><div style="position: absolute; overflow: hidden; left: -6px; top: -1px; width: 16px; height: 30px;"><div style="position: absolute; left: 6px; background-color: rgb(255, 255, 255); transform: skewX(22.6deg); transform-origin: 0px 0px 0px; height: 24px; width: 10px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;"></div></div><div style="position: absolute; overflow: hidden; top: -1px; left: 10px; width: 16px; height: 30px;"><div style="position: absolute; left: 0px; background-color: rgb(255, 255, 255); transform: skewX(-22.6deg); transform-origin: 10px 0px 0px; height: 24px; width: 10px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;"></div></div></div><div style="position: absolute; left: 1px; top: 1px; border-radius: 2px; background-color: rgb(255, 255, 255); width: 51px; height: 31px;"></div></div><div class="gm-style-iw" style="top: 9px; position: absolute; left: 15px; overflow: hidden; width: 23px;"><div style="display: inline-block; overflow: auto; max-height: 654px; max-width: 654px;"></div><div style="border-top: 1px solid rgb(204, 204, 204); margin-top: 9px; padding: 6px; display: none; visibility: hidden; font-size: 13px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-family: Roboto, Arial;"><a href="https://www.imoveispa.com.br/" target="_blank" rel="noopener" style="cursor: pointer; color: rgb(66, 127, 237); text-decoration: none;">Visualize no Google Maps</a></div></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 10px; z-index: 10000; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div></div></div><iframe frameborder="0" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/saved_resource.html"></iframe><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" rel="noopener" href="https://maps.google.com/maps?ll=-19.926122,-43.941935&amp;z=15&amp;t=m&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 326px; top: 359px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div><div style="font-size: 13px;">Dados cartográficos ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 193px; bottom: 0px; width: 170px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span>Dados cartográficos ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Dados cartográficos ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 113px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" rel="noopener" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div></div><button draggable="false" title="Ativar a visualização em tela cheia" aria-label="Ativar a visualização em tela cheia" type="button" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px 14px; padding: 0px; position: absolute; cursor: pointer; user-select: none; width: 25px; height: 25px; overflow: hidden; top: 0px; right: 0px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></button><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-19.926122,-43.941935,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><button draggable="false" title="Aumentar o zoom" aria-label="Aumentar o zoom" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Diminuir o zoom" aria-label="Diminuir o zoom" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; display: none;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; top: 0px; cursor: pointer;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Mostrar mapa de ruas" aria-label="Mostrar mapa de ruas" aria-pressed="true" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px; font-weight: 500;">Mapa</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Relevo</label></div></div></div><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Mostrar imagens de satélite" aria-label="Mostrar imagens de satélite" aria-pressed="false" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 37px; border-left: 0px;">Satélite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img alt="" src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Marcadores</label></div></div></div></div></div></div></div>
     </div>
 
     <div id="content-right" class="col-xs-12 col-sm-6">
@@ -531,82 +556,9 @@
           <ul id="block-results" class="nextToMe">
     <li class="results-itens">
   <div class="box-content">
-    <a href="https://www.imoveispa.com.br/propriedades/7-casa-top-em-rua-joaquim-tavora-47" class="link-black">
-      <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
-      </div>
-
-      <div class="titles">7-Casa Top em Rua Joaquim távora, 47</div>
-
-      <div class="hospedagem col-sm-2">
-        <ul class="caracteristicas">
-          <li>
-            <span class="icones glyphicon glyphicon-bed"></span>0 quarto(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-flash"></span>0 suíte(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-info-sign"></span>4 banheiro(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-home"></span>0 vaga(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>125m<sup>2</sup>
-          </li>
-        </ul>
-      </div>
-
-      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/7-casa-top-em-rua-joaquim-tavora-47" class="link-black">
-        <div class="title"> 
-          <h2>São Paulo</h2>
-          <span>São Paulo</span>
-        </div>
-        <div class="update hidden-xs">
-          Atualizado em 24/05/2018 21:57:15
-        </div>
-        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/7-casa-top-em-rua-joaquim-tavora-47" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
-          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/7-casa-top-em-rua-joaquim-tavora-47">Ver detalhes</a>
-        </div>
-
-        <div class="acao">
-          <a href="javascript:;" onclick="showModal(this)" data-propertyid="48" data-phonenumber="(11) 966914283" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
-        </div>
-      </div>
-    
-  </div>
-</li>
-        <script type="text/javascript">
-          funcPointers.push(function(map){
-            val = {
-              user:{
-                phone_number: '966914283',
-                phone_area_code: '11',
-              },
-              latitude: '-23.5828373',
-              longitude: '-46.6336081',
-              title: '7-Casa subtitulo top em Rua Joaquim távora, 47',
-              photo:{
-                image: '/noImage.jpg'
-              },
-              slug: '7-casa-top-em-rua-joaquim-tavora-47',
-              area: '125',
-              price: '510000.0',
-              id: '48',
-            }
-            setMapPoint(map, val)
-          });
-        </script>
-    <li class="results-itens">
-  <div class="box-content">
     <a href="https://www.imoveispa.com.br/propriedades/9-casa-de-condominio-top-em-rua-pelotas-11" class="link-black">
       <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">9-Casa de Condomínio Top em Rua pelotas, 11</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -622,7 +574,7 @@
             <span class="icones glyphicon glyphicon-home"></span>2 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>125m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>74m<sup>2</sup>
           </li>
         </ul>
       </div>
@@ -630,14 +582,15 @@
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/9-casa-de-condominio-top-em-rua-pelotas-11" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$510.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:11:43
+          Atualizado em 20/06/2018 00:36:53
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/9-casa-de-condominio-top-em-rua-pelotas-11" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/9-casa-de-condominio-top-em-rua-pelotas-11">Ver detalhes</a>
         </div>
 
@@ -655,14 +608,14 @@
                 phone_number: '966914283',
                 phone_area_code: '11',
               },
-              latitude: '-23.5813596',
-              longitude: '-46.6429972',
+              latitude: '-23.5813528',
+              longitude: '-46.6430001',
               title: '9-Casa de Condomínio subtitulo top em Rua pelotas, 11',
               photo:{
                 image: '/noImage.jpg'
               },
               slug: '9-casa-de-condominio-top-em-rua-pelotas-11',
-              area: '125',
+              area: '74',
               price: '510000.0',
               id: '50',
             }
@@ -674,9 +627,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/1-apartamento-top-em-rua-joaquim-tavora-2" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097340-1-apartamento-top-em-rua-joaquim-tavora-2.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">1-Apartamento Top em Rua Joaquim távora, 2</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -692,7 +642,7 @@
             <span class="icones glyphicon glyphicon-home"></span>1 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>75m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>249m<sup>2</sup>
           </li>
         </ul>
       </div>
@@ -700,14 +650,15 @@
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/1-apartamento-top-em-rua-joaquim-tavora-2" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$70.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:37:23
+          Atualizado em 20/06/2018 00:37:37
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/1-apartamento-top-em-rua-joaquim-tavora-2" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/1-apartamento-top-em-rua-joaquim-tavora-2">Ver detalhes</a>
         </div>
 
@@ -732,7 +683,7 @@
                 image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097340-1-apartamento-top-em-rua-joaquim-tavora-2.jpg'
               },
               slug: '1-apartamento-top-em-rua-joaquim-tavora-2',
-              area: '75',
+              area: '249',
               price: '70000.0',
               id: '42',
             }
@@ -744,9 +695,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/2-box-top-em-rua-joaquim-tavora-14" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097417-2-box-top-em-rua-joaquim-tavora-14.jpeg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">2-Box Top em Rua Joaquim távora, 14</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -762,7 +710,7 @@
             <span class="icones glyphicon glyphicon-home"></span>0 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>52m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>240m<sup>2</sup>
           </li>
         </ul>
       </div>
@@ -770,14 +718,15 @@
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/2-box-top-em-rua-joaquim-tavora-14" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$800.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 20/04/2018 21:05:54
+          Atualizado em 20/06/2018 00:36:52
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/2-box-top-em-rua-joaquim-tavora-14" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/2-box-top-em-rua-joaquim-tavora-14">Ver detalhes</a>
         </div>
 
@@ -802,7 +751,7 @@
                 image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097417-2-box-top-em-rua-joaquim-tavora-14.jpeg'
               },
               slug: '2-box-top-em-rua-joaquim-tavora-14',
-              area: '52',
+              area: '240',
               price: '800000.0',
               id: '43',
             }
@@ -814,9 +763,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/6-cobertura-top-em-rua-vergueiro-4" class="link-black">
       <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">6-Cobertura Top em Rua Vergueiro, 4</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -832,7 +778,7 @@
             <span class="icones glyphicon glyphicon-home"></span>0 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>125m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>72m<sup>2</sup>
           </li>
         </ul>
       </div>
@@ -840,14 +786,15 @@
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/6-cobertura-top-em-rua-vergueiro-4" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$400.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:34:15
+          Atualizado em 20/06/2018 00:36:54
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/6-cobertura-top-em-rua-vergueiro-4" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/6-cobertura-top-em-rua-vergueiro-4">Ver detalhes</a>
         </div>
 
@@ -858,14 +805,168 @@
     
   </div>
 </li>
+        <script type="text/javascript">
+          funcPointers.push(function(map){
+            val = {
+              user:{
+                phone_number: '',
+                phone_area_code: '',
+              },
+              latitude: '-23.5620245',
+              longitude: '-46.6389741',
+              title: '6-Cobertura subtitulo top em Rua Vergueiro, 4',
+              photo:{
+                image: '/noImage.jpg'
+              },
+              slug: '6-cobertura-top-em-rua-vergueiro-4',
+              area: '72',
+              price: '400000.0',
+              id: '47',
+            }
+            setMapPoint(map, val)
+          });
+        </script>
+    <li class="results-itens">
+  <div class="box-content">
+    <a href="https://www.imoveispa.com.br/propriedades/4-lote-terreno-top-em-rua-vergueiro-7" class="link-black">
+      <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097717-4-lote-terreno-top-em-rua-vergueiro-7.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
+      </div>
+      <div class="hospedagem col-sm-2">
+        <ul class="caracteristicas">
+          <li>
+            <span class="icones glyphicon glyphicon-bed"></span>4 quarto(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-flash"></span>2 suíte(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-info-sign"></span>2 banheiro(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-home"></span>2 vaga(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>69m<sup>2</sup>
+          </li>
+        </ul>
+      </div>
+
+      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/4-lote-terreno-top-em-rua-vergueiro-7" class="link-black">
+        <div class="title"> 
+          <h2>São Paulo</h2>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$70.000,00</span>
+        </div>
+        <div class="update hidden-xs">
+          Atualizado em 20/06/2018 00:36:52
+        </div>
+        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/4-lote-terreno-top-em-rua-vergueiro-7" class="link-black">
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
+          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/4-lote-terreno-top-em-rua-vergueiro-7">Ver detalhes</a>
+        </div>
+
+        <div class="acao">
+          <a href="javascript:;" onclick="showModal(this)" data-propertyid="45" data-phonenumber="Não informado" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
+        </div>
+      </div>
+    
+  </div>
+</li>
+        <script type="text/javascript">
+          funcPointers.push(function(map){
+            val = {
+              user:{
+                phone_number: '',
+                phone_area_code: '',
+              },
+              latitude: '-23.562127',
+              longitude: '-46.6385219',
+              title: '4-Lote/Terreno subtitulo top em Rua Vergueiro, 7',
+              photo:{
+                image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097717-4-lote-terreno-top-em-rua-vergueiro-7.jpg'
+              },
+              slug: '4-lote-terreno-top-em-rua-vergueiro-7',
+              area: '69',
+              price: '70000.0',
+              id: '45',
+            }
+            setMapPoint(map, val)
+          });
+        </script>
+    <li class="results-itens">
+  <div class="box-content">
+    <a href="https://www.imoveispa.com.br/propriedades/8-garagem-top-em-rua-pelotas-60" class="link-black">
+      <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097260-garagem.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
+      </div>
+      <div class="hospedagem col-sm-2">
+        <ul class="caracteristicas">
+          <li>
+            <span class="icones glyphicon glyphicon-bed"></span>2 quarto(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-flash"></span>4 suíte(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-info-sign"></span>4 banheiro(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-home"></span>0 vaga(s)
+          </li>
+          <li>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>148m<sup>2</sup>
+          </li>
+        </ul>
+      </div>
+
+      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/8-garagem-top-em-rua-pelotas-60" class="link-black">
+        <div class="title"> 
+          <h2>São Paulo</h2>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$840.000,00</span>
+        </div>
+        <div class="update hidden-xs">
+          Atualizado em 20/06/2018 00:36:54
+        </div>
+        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/8-garagem-top-em-rua-pelotas-60" class="link-black">
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
+          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/8-garagem-top-em-rua-pelotas-60">Ver detalhes</a>
+        </div>
+
+        <div class="acao">
+          <a href="javascript:;" onclick="showModal(this)" data-propertyid="49" data-phonenumber="(11) 966914283" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
+        </div>
+      </div>
+    
+  </div>
+</li>
+        <script type="text/javascript">
+          funcPointers.push(function(map){
+            val = {
+              user:{
+                phone_number: '966914283',
+                phone_area_code: '11',
+              },
+              latitude: '-23.581181',
+              longitude: '-46.6435642',
+              title: '8-Garagem subtitulo top em Rua pelotas, 60',
+              photo:{
+                image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097260-garagem.jpg'
+              },
+              slug: '8-garagem-top-em-rua-pelotas-60',
+              area: '148',
+              price: '840000.0',
+              id: '49',
+            }
+            setMapPoint(map, val)
+          });
+        </script>
     <li class="results-itens">
   <div class="box-content">
     <a href="https://www.imoveispa.com.br/propriedades/10-chacara-top-em-avenida-conselheiro-rodrigues-alves-7" class="link-black">
       <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">10-Chácara Top em Avenida conselheiro rodrigues alves, 7</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -881,7 +982,7 @@
             <span class="icones glyphicon glyphicon-home"></span>4 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>125m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>188m<sup>2</sup>
           </li>
         </ul>
       </div>
@@ -889,14 +990,15 @@
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/10-chacara-top-em-avenida-conselheiro-rodrigues-alves-7" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$70.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 12/09/2017 17:14:58
+          Atualizado em 20/06/2018 00:36:45
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/10-chacara-top-em-avenida-conselheiro-rodrigues-alves-7" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/10-chacara-top-em-avenida-conselheiro-rodrigues-alves-7">Ver detalhes</a>
         </div>
 
@@ -907,104 +1009,95 @@
     
   </div>
 </li>
+        <script type="text/javascript">
+          funcPointers.push(function(map){
+            val = {
+              user:{
+                phone_number: '',
+                phone_area_code: '',
+              },
+              latitude: '-23.5817235',
+              longitude: '-46.6388232',
+              title: '10-Chácara subtitulo top em Avenida conselheiro rodrigues alves, 7',
+              photo:{
+                image: '/noImage.jpg'
+              },
+              slug: '10-chacara-top-em-avenida-conselheiro-rodrigues-alves-7',
+              area: '188',
+              price: '70000.0',
+              id: '51',
+            }
+            setMapPoint(map, val)
+          });
+        </script>
     <li class="results-itens">
   <div class="box-content">
-    <a href="https://www.imoveispa.com.br/propriedades/12-casa-de-condominio-top-em-avenida-conselheiro-rodrigues-alves-4" class="link-black">
+    <a href="https://www.imoveispa.com.br/propriedades/11-casa-top-em-rua-pelotas-8" class="link-black">
       <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">12-Casa de Condomínio Top em Avenida conselheiro rodrigues alves, 4</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
-            <span class="icones glyphicon glyphicon-bed"></span>3 quarto(s)
+            <span class="icones glyphicon glyphicon-bed"></span>0 quarto(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-flash"></span>2 suíte(s)
+            <span class="icones glyphicon glyphicon-flash"></span>4 suíte(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-info-sign"></span>2 banheiro(s)
+            <span class="icones glyphicon glyphicon-info-sign"></span>4 banheiro(s)
           </li>
           <li>
             <span class="icones glyphicon glyphicon-home"></span>1 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>75m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>270m<sup>2</sup>
           </li>
         </ul>
       </div>
 
-      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/12-casa-de-condominio-top-em-avenida-conselheiro-rodrigues-alves-4" class="link-black">
+      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/11-casa-top-em-rua-pelotas-8" class="link-black">
         <div class="title"> 
           <h2>São Paulo</h2>
-          <span>São Paulo</span>
+          <div><span>São Paulo</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Mariana</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$70.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 12/09/2017 17:14:58
+          Atualizado em 20/06/2018 00:36:55
         </div>
-        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/12-casa-de-condominio-top-em-avenida-conselheiro-rodrigues-alves-4" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
-          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/12-casa-de-condominio-top-em-avenida-conselheiro-rodrigues-alves-4">Ver detalhes</a>
+        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/11-casa-top-em-rua-pelotas-8" class="link-black">
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
+          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/11-casa-top-em-rua-pelotas-8">Ver detalhes</a>
         </div>
 
         <div class="acao">
-          <a href="javascript:;" onclick="showModal(this)" data-propertyid="53" data-phonenumber="(11) 966914283" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
+          <a href="javascript:;" onclick="showModal(this)" data-propertyid="52" data-phonenumber="Não informado" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
         </div>
       </div>
     
   </div>
 </li>
-    <li class="results-itens">
-  <div class="box-content">
-    <a href="https://www.imoveispa.com.br/propriedades/13-cobertura-top-em-avenida-conselheiro-rodrigues-alves-102" class="link-black">
-      <div class="status col-sm-5" style="background-image: url(/noImage.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
-      </div>
-
-      <div class="titles">13-Cobertura Top em Avenida conselheiro rodrigues alves, 102</div>
-
-      <div class="hospedagem col-sm-2">
-        <ul class="caracteristicas">
-          <li>
-            <span class="icones glyphicon glyphicon-bed"></span>3 quarto(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-flash"></span>0 suíte(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-info-sign"></span>3 banheiro(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-home"></span>3 vaga(s)
-          </li>
-          <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>75m<sup>2</sup>
-          </li>
-        </ul>
-      </div>
-
-      </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/13-cobertura-top-em-avenida-conselheiro-rodrigues-alves-102" class="link-black">
-        <div class="title"> 
-          <h2>São Paulo</h2>
-          <span>São Paulo</span>
-        </div>
-        <div class="update hidden-xs">
-          Atualizado em 12/09/2017 17:14:58
-        </div>
-        </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/13-cobertura-top-em-avenida-conselheiro-rodrigues-alves-102" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
-          <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/13-cobertura-top-em-avenida-conselheiro-rodrigues-alves-102">Ver detalhes</a>
-        </div>
-
-        <div class="acao">
-          <a href="javascript:;" onclick="showModal(this)" data-propertyid="54" data-phonenumber="(11) 966914283" class="modal-contatar btn btn-contatar btn-xs btn-block">CONTATAR</a>
-        </div>
-      </div>
-    
-  </div>
-</li>
+        <script type="text/javascript">
+          funcPointers.push(function(map){
+            val = {
+              user:{
+                phone_number: '',
+                phone_area_code: '',
+              },
+              latitude: '-23.5811585',
+              longitude: '-46.6430075',
+              title: '11-Casa subtitulo top em Rua pelotas, 8',
+              photo:{
+                image: '/noImage.jpg'
+              },
+              slug: '11-casa-top-em-rua-pelotas-8',
+              area: '270',
+              price: '70000.0',
+              id: '52',
+            }
+            setMapPoint(map, val)
+          });
+        </script>
 </ul>
 
           <h1>Propriedades recentes</h1>
@@ -1014,9 +1107,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/19-lote-terreno-top-em-r-curitiba-143" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097888-19-lote-terreno-top-em-r-curitiba-143.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">19-Lote/Terreno Top em R curitiba, 143</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1032,22 +1122,23 @@
             <span class="icones glyphicon glyphicon-home"></span>2 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>75m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>71m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/19-lote-terreno-top-em-r-curitiba-143" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>Minas Gerais</span>
+          <h2>Minas Gerais</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Lourdes</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$400.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:37:08
+          Atualizado em 20/06/2018 00:37:37
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/19-lote-terreno-top-em-r-curitiba-143" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/19-lote-terreno-top-em-r-curitiba-143">Ver detalhes</a>
         </div>
 
@@ -1072,7 +1163,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097888-19-lote-terreno-top-em-r-curitiba-143.jpg'
                       },
                       slug: '19-lote-terreno-top-em-r-curitiba-143',
-                      area: '75',
+                      area: '71',
                       price: '400000.0',
                       id: '120',
                     }
@@ -1084,9 +1175,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/18-flat-top-em-rua-rio-de-janeiro-11" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097806-18-flat-top-em-rua-rio-de-janeiro-11.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">18-Flat Top em Rua rio de janeiro, 11</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1102,22 +1190,23 @@
             <span class="icones glyphicon glyphicon-home"></span>0 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>52m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>198m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/18-flat-top-em-rua-rio-de-janeiro-11" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>Minas Gerais</span>
+          <h2>Minas Gerais</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Lourdes</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$70.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:36:54
+          Atualizado em 20/06/2018 00:37:34
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/18-flat-top-em-rua-rio-de-janeiro-11" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/18-flat-top-em-rua-rio-de-janeiro-11">Ver detalhes</a>
         </div>
 
@@ -1142,7 +1231,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522097806-18-flat-top-em-rua-rio-de-janeiro-11.jpg'
                       },
                       slug: '18-flat-top-em-rua-rio-de-janeiro-11',
-                      area: '52',
+                      area: '198',
                       price: '70000.0',
                       id: '119',
                     }
@@ -1154,9 +1243,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/17-cobertura-top-em-rua-dos-timbiras-50" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1505404784-20140103105716753964u.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">17-Cobertura Top em Rua dos timbiras, 50</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1172,22 +1258,23 @@
             <span class="icones glyphicon glyphicon-home"></span>1 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>São Paulom<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>280m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/17-cobertura-top-em-rua-dos-timbiras-50" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>São Paulo</span>
+          <h2>São Paulo</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Vila Santa Luzia</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$400,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 19/05/2018 07:13:38
+          Atualizado em 20/06/2018 00:37:33
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/17-cobertura-top-em-rua-dos-timbiras-50" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/17-cobertura-top-em-rua-dos-timbiras-50">Ver detalhes</a>
         </div>
 
@@ -1212,7 +1299,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1505404784-20140103105716753964u.jpg'
                       },
                       slug: '17-cobertura-top-em-rua-dos-timbiras-50',
-                      area: 'São Paulo',
+                      area: '280',
                       price: '400.0',
                       id: '118',
                     }
@@ -1224,9 +1311,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/16-sobrado-top-em-rua-rio-de-janeiro-82" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098106-download.jpeg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">16-Sobrado Top em Rua rio de janeiro, 82</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1242,22 +1326,23 @@
             <span class="icones glyphicon glyphicon-home"></span>4 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>52m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>138m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/16-sobrado-top-em-rua-rio-de-janeiro-82" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>Minas Gerais</span>
+          <h2>Minas Gerais</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Lourdes</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$840.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 27/03/2018 05:20:40
+          Atualizado em 20/06/2018 00:37:33
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/16-sobrado-top-em-rua-rio-de-janeiro-82" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/16-sobrado-top-em-rua-rio-de-janeiro-82">Ver detalhes</a>
         </div>
 
@@ -1282,7 +1367,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098106-download.jpeg'
                       },
                       slug: '16-sobrado-top-em-rua-rio-de-janeiro-82',
-                      area: '52',
+                      area: '138',
                       price: '840000.0',
                       id: '117',
                     }
@@ -1294,9 +1379,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/15-lote-terreno-top-em-r-curitiba-57" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098295-17198319.jpeg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">15-Lote/Terreno Top em R curitiba, 57</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1312,22 +1394,23 @@
             <span class="icones glyphicon glyphicon-home"></span>2 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>52m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>112m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/15-lote-terreno-top-em-r-curitiba-57" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>Minas Gerais</span>
+          <h2>Minas Gerais</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Lourdes</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$0,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 02/04/2018 11:42:48
+          Atualizado em 20/06/2018 00:37:31
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/15-lote-terreno-top-em-r-curitiba-57" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/15-lote-terreno-top-em-r-curitiba-57">Ver detalhes</a>
         </div>
 
@@ -1352,7 +1435,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098295-17198319.jpeg'
                       },
                       slug: '15-lote-terreno-top-em-r-curitiba-57',
-                      area: '52',
+                      area: '112',
                       price: '0.0',
                       id: '116',
                     }
@@ -1364,9 +1447,6 @@
     <a href="https://www.imoveispa.com.br/propriedades/14-casa-de-condominio-top-em-r-curitiba-70" class="link-black">
       <div class="status col-sm-5" style="background-image: url(https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098160-14-casa-de-condominio-top-em-r-curitiba-70.jpg);background-color: #bec3c7;border-bottom: 1px solid #ccc;">
       </div>
-
-      <div class="titles">14-Casa de Condomínio Top em R curitiba, 70</div>
-
       <div class="hospedagem col-sm-2">
         <ul class="caracteristicas">
           <li>
@@ -1382,22 +1462,23 @@
             <span class="icones glyphicon glyphicon-home"></span>4 vaga(s)
           </li>
           <li>
-            <span class="icones glyphicon glyphicon-resize-horizontal"></span>125m<sup>2</sup>
+            <span class="icones glyphicon glyphicon-resize-horizontal"></span>193m<sup>2</sup>
           </li>
         </ul>
       </div>
 
       </a><div class="description col-sm-5"><a href="https://www.imoveispa.com.br/propriedades/14-casa-de-condominio-top-em-r-curitiba-70" class="link-black">
         <div class="title"> 
-          <h2>Belo Horizonte</h2>
-          <span>Minas Gerais</span>
+          <h2>Minas Gerais</h2>
+          <div><span>Belo Horizonte</span></div>
+          <span style="font-size: 18px;margin-top: 3px;;display: block;">Lourdes</span>
+          <span style="font-size: 18px;color: #696969 !important;font-style: normal;margin-top: 6px;display: block;">R$510.000,00</span>
         </div>
         <div class="update hidden-xs">
-          Atualizado em 08/01/2018 22:49:01
+          Atualizado em 20/06/2018 00:37:25
         </div>
         </a><div class="anunciante hidden-xs"><a href="https://www.imoveispa.com.br/propriedades/14-casa-de-condominio-top-em-r-curitiba-70" class="link-black">
-          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/img_162_2869481_logo.jpg" class="img-responsive img-anunciante" width="58">
-          <span class="name">CONX</span>
+          <img src="./PORTAL __ Imoveispa __ Apartamentos, casas, aluguel e venda de imóveis_files/logo-constutura.jpg" class="img-responsive img-anunciante" width="58">
           <span></span></a><a class="btn-ver-detalhes hidden-xs" href="https://www.imoveispa.com.br/propriedades/14-casa-de-condominio-top-em-r-curitiba-70">Ver detalhes</a>
         </div>
 
@@ -1422,7 +1503,7 @@
                         image: 'https://indicedeimoveis.s3-sa-east-1.amazonaws.com/1522098160-14-casa-de-condominio-top-em-r-curitiba-70.jpg'
                       },
                       slug: '14-casa-de-condominio-top-em-r-curitiba-70',
-                      area: '125',
+                      area: '193',
                       price: '510000.0',
                       id: '115',
                     }
@@ -1446,7 +1527,7 @@
         <button type="button" class="btn btn-warning" id="show-phone-btn" style="margin-bottom:10px;margin-left: 15px;">Mostrar Telefone</button>
         <p class="phone-number-user" id="contact_phone_number"></p>
       </div>
-      <form novalidate="novalidate" class="simple_form new_contact" id="new_contact" action="https://www.imoveispa.com.br/contacts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="U/j5t3JBGL4lH/LqMOwNaPvzAMVWvPAsTMDa7ah7S8LlO8GnDL/+9CyAgbWg/CcpelChNEALH0U1inj7Qn7YQw==">
+      <form novalidate="novalidate" class="simple_form new_contact" id="new_contact" action="https://www.imoveispa.com.br/contacts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="2L0NqtPkWyc5KFGzrr3m23imyrvAjB3YMeDXLEClwz3XFmTCEefD8VqInQYuSUiKsZZHu02vTIk9A1HTOkOjkw==">
         <div class="form-group col-xs-12 string required contact_name"><div class="input-group"><span class="input-group-addon"><label class="string required" for="contact_name"><abbr title="Campo obrigatório">*</abbr> Nome</label></span><input class="string required form-control" type="text" name="contact[name]" id="contact_name"></div></div>
         <div class="form-group col-xs-12 string optional contact_phone_number"><div class="input-group"><span class="input-group-addon"><label class="string optional" for="contact_phone_number">Telefone</label></span><input class="string optional form-control" type="text" name="contact[phone_number]" id="contact_phone_number"></div></div>
         <div class="form-group col-xs-12 email required contact_email"><div class="input-group"><span class="input-group-addon"><label class="email required" for="contact_email"><abbr title="Campo obrigatório">*</abbr> E-mail</label></span><input class="string email required form-control form-control" type="email" name="contact[email]" id="contact_email"></div></div>
